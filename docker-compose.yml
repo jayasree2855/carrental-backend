@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: crms-backend
+    ports:
+      - "8081:8080"
+    volumes:
+      - crms_app_data:/app/data
+    restart: always
+
+volumes:
+  crms_app_data:
